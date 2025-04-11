@@ -48,22 +48,20 @@
                         ?>
                         <tr>
                             <td><?php echo $no; ?></td>
-                    
                             <td><?php echo $result['nama_jenis']; ?></td>
-                            
-
                             <td>
-                            <a href="view_edit.php?id=<?php echo $result['id_jenis'] ?>" class="btn btn-warning">Edit</a>
-                            <a href="hapus.php?id=<?php echo $result['id_jenis'] ?>" 
+                            <a class="btn btn-warning btn-sm" href="view_edit.php?id=<?php echo $result['id_jenis']?>">
+                            <i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                            <a href="proses_hapus.php?id=<?php echo $result['id_jenis']; ?>" 
                             onclick="return confirm('Kamu Yakin???')" 
-                            class="btn btn-danger">Hapus</a>
+                            class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Hapus </a>
                             </td>
                         </tr>
                         <?php
                         $no++;
                     }
                 } else {
-                    echo "<tr><td colspan='7' class='text-center'>Data siswa tidak ditemukan</td></tr>";
+                    echo "<tr><td colspan='7' class='text-center'>Data jenis tidak ditemukan</td></tr>";
                 }
                 ?>
   </tbody>
